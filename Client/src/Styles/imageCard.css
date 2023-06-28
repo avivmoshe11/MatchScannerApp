@@ -1,0 +1,46 @@
+.imageCard {
+  position: absolute;
+}
+
+.imageCard img {
+  height: 300px;
+  width: 500px;
+  border: 10px solid grey;
+
+  border-radius: 50% 50% 50% 50% / 12% 12% 88% 88%;
+  transform: translate(-50%, -50%);
+}
+
+.imageCard:nth-child(1) {
+  z-index: 3;
+}
+.imageCard:nth-child(1) img {
+  height: 400px;
+  width: 600px;
+}
+
+.imageCard:nth-child(2) {
+  /* transform: translateX(-60%); */
+  z-index: 2;
+}
+
+.imageCard:nth-child(3) {
+  /* transform: translateX(60%); */
+  z-index: 2;
+}
+
+.imageCard:nth-child(4) {
+  /* transform: translateX(120%); */
+  z-index: 1;
+}
+
+.imageCard:nth-child(5) {
+  /* transform: translateX(-120%); */
+  z-index: 1;
+}
+
+.imageCard:nth-child(4) img,
+.imageCard:nth-child(5) img {
+  height: 250px;
+  width: 450px;
+}

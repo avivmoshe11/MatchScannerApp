@@ -1,0 +1,48 @@
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(76, 75, 75, 0.7)), url(../Assets//images/league.webp) center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner {
+  padding: 0;
+  color: var(--clr-white);
+}
+
+.home-btn {
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 1px solid var(--clr-white);
+}
+
+.images-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(76, 75, 75, 0.7));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.live-stats-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepage-stat {
+  background-color: #f4f4f4;
+  width: 20%;
+  height: 10vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+.homepage-stat h5 {
+  margin: 0px 10px;
+  border-bottom: 0.5px solid lightslategrey;
+}
+.homepage-stat p {
+  margin-top: 5px;
+  color: black;
+}

@@ -1,0 +1,32 @@
+.container-settings {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.container-settings input {
+    width: 70%;
+    margin-right: 30px;
+}
+.label-input{
+    width: 30%;
+}
+
+.settings-form {
+    width: 500px;
+}
+
+.profile-settings-container {
+    display: flex; /* Children will act by decided params. */
+    flex-direction: column; /* Rule: stack vertical */
+    align-items: center;
+    justify-content: center;
+}
+
+.title-profile-settings {
+
+    margin-top: 120px;
+}
+

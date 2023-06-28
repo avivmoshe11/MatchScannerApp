@@ -1,0 +1,4 @@
+{
+  "apiUrl": "/api",
+  "developmentUrl": "http://localhost:80/api"
+}

@@ -1,0 +1,53 @@
+.createUser-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 12rem;
+  max-width: 100%;
+}
+
+form {
+  padding: 1rem;
+
+  /* background-color: beige;
+  border-radius: 10px; */
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px 0;
+  width: 100%;
+}
+
+label {
+  display: flex;
+  width: 100%;
+  justify-content: start;
+}
+
+input {
+  padding: 0.5rem 0.6rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  font-weight: 300;
+  background: var(--clr-white);
+  border: transparent;
+  width: 400px;
+  height: 3rem;
+}
+
+.btn-user {
+  margin-top: 20px;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.sign-up-small {
+  color: var(--clr-sec-4) !important;
+}

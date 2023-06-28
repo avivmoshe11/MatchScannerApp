@@ -1,0 +1,320 @@
+.loginModal {
+  position: fixed;
+  height: 70vh;
+  width: 60vw;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  top: 15vh;
+  left: 20%;
+  z-index: 9;
+  background-color: rgba(255, 255, 255, 0.945);
+}
+.blur-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 8;
+  background-color: rgba(233, 230, 230, 0.1);
+  backdrop-filter: blur(5px);
+}
+/* @keyframes moveFromLeftToRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(151%);
+  }
+}
+@keyframes moveFromRightToLeft {
+  0% {
+    transform: translateX(151%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  100% {
+    opacity: 1;
+    display: flex;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+} */
+.modal-data {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+}
+.rtContainer {
+  background-image: url('https://i.pinimg.com/originals/c5/62/39/c5623901132330977913e2233ee53d97.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  z-index: 15;
+  transition: all 1s;
+}
+/* .move-right {
+  animation: moveFromLeftToRight 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.move-left {
+  animation: moveFromRightToLeft 2s ease-in-out;
+  animation-fill-mode: forwards;
+} */
+.rotating-message {
+  text-shadow: 0.6px 0.6px 0 #0000001a, -0.6px -0.6px 0 #0000001a, 0.6px -0.6px 0 #0000001a, -0.6px 0.6px 0 #0000001a;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: inherit;
+  position: relative;
+}
+.rotating-message h5 {
+  font-weight: 400;
+  /* width: 60%; */
+  margin: 30px 0px;
+}
+
+.rotating-message button,
+.signup-form button,
+.signin-form button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 15px 20px;
+  border: 1px solid white;
+  background-color: inherit;
+  color: white;
+  cursor: pointer;
+  max-width: 35%;
+  text-transform: uppercase;
+}
+
+.signup-form,
+.signin-form {
+  display: flex;
+  width: 65%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(20, 221, 188);
+
+  transition: all 1s;
+}
+.signup-form .inputs,
+.signin-form .inputs {
+  margin-top: 20px;
+}
+.signup-form input,
+.signin-form input {
+  margin: 8px 0px;
+  background-color: #eeececa8;
+}
+.signup-form button,
+.signin-form button {
+  margin-top: 20px;
+  background-color: rgb(20, 221, 188);
+}
+.hidden {
+  animation: fadeOut 1.5s fade-in;
+  animation-fill-mode: forwards;
+}
+.show {
+  animation: fadeIn 2.5s fade-in;
+  animation-fill-mode: forwards;
+}
+
+/* .revert {
+  flex-direction: row-reverse;
+
+  transition: all 0.5s ease-in-out;
+} */
+
+@keyframes animate {
+  from {
+    width: 60%;
+  }
+
+  to {
+    width: 35%;
+  }
+}
+
+/* @keyframes animate2 {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+} */
+
+/* control rt-container when click */
+
+.revert-a {
+  transition: all 1s;
+  transform: translateX(131%);
+  /* animation: animate 1s 0s; */
+}
+
+.revert-b {
+  transform: translateX(-75%);
+  transition: all 1s;
+}
+
+.signin-form {
+  width: 100%;
+  transition: all 1s;
+}
+
+/* text while clicking */
+.text-opacity {
+  opacity: 0;
+  transition: all 1s;
+}
+.text-opacity-new {
+  opacity: 100;
+  transition: all 1s;
+}
+
+.text-opacity-old {
+  opacity: 100;
+  transition: all 1s;
+}
+
+.inputBox {
+  position: relative;
+  margin: 14px 0px;
+}
+.inputBox input {
+  position: relative;
+  padding: 20px 10px 5px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  color: rgb(153, 153, 153);
+  font-weight: 600;
+}
+.inputBox span {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: rgb(20, 221, 188);
+  transform: translateY(-26px);
+  font-size: 0.75em;
+}
+.inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(20, 221, 188);
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 1190px) {
+  .loginModal {
+    height: 65vh;
+    width: 55vw;
+  }
+
+  .revert-a {
+    transform: translateX(175%);
+  }
+
+  .revert-b {
+    transform: translateX(-55%);
+  }
+
+  .signup-form .inputs input,
+  .signin-form .inputs {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1143px) {
+  .revert-a {
+    transform: translateX(190%);
+  }
+}
+form .error {
+  background-color: rgba(214, 39, 39, 0.678);
+  border: 1px solid rgba(214, 39, 39, 0.678);
+  border-radius: 14px;
+  height: 40px;
+  margin-top: 20px;
+}
+
+form .error span {
+  color: #1a1c25;
+  font-weight: 500;
+}
+
+form .error span::first-letter {
+  text-transform: capitalize;
+}
+
+/* @media screen and (max-width: 1190px) {
+  .modal-data {
+    flex-direction: column;
+  }
+
+  .revert-a {
+    transition: all 1s;
+    transform: translateY(285%);
+   
+  }
+
+  .revert-b {
+    transform: translateY(-45%);
+    transition: all 1s;
+  }
+
+  .rtContainer {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .sign-width {
+    margin-left: 10rem;
+  }
+} */
